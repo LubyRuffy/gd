@@ -1,13 +1,13 @@
 /**
  * Copyright 2020 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package inject
 
 import (
 	"fmt"
-	"github.com/chuck1024/gd/utls/orderedmap"
+	"github.com/Xxianglei/gd/utls/orderedmap"
 	"github.com/facebookgo/structtag"
 	"reflect"
 	"sync"

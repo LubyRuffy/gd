@@ -1,6 +1,6 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package discovery
@@ -15,8 +15,8 @@ package discovery
 //	"context"
 //	"encoding/json"
 //	"fmt"
-//	"github.com/chuck1024/gd/dlog"
-//	"github.com/chuck1024/gd/server"
+//	"github.com/Xxianglei/gd/dlog"
+//	"github.com/Xxianglei/gd/server"
 //	"github.com/etcd-io/etcd/clientv3"
 //	"sync"
 //	"time"

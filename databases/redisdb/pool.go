@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package redisdb
@@ -8,11 +8,11 @@ package redisdb
 import (
 	"errors"
 	"fmt"
-	log "github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/runtime/gl"
-	"github.com/chuck1024/gd/runtime/gr"
-	"github.com/chuck1024/gd/runtime/pc"
-	"github.com/chuck1024/gd/utls"
+	log "github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/runtime/gl"
+	"github.com/Xxianglei/gd/runtime/gr"
+	"github.com/Xxianglei/gd/runtime/pc"
+	"github.com/Xxianglei/gd/utls"
 	"github.com/garyburd/redigo/redis"
 	"gopkg.in/ini.v1"
 	"math/rand"

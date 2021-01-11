@@ -1,19 +1,19 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package gd
 
 import (
 	"fmt"
-	"github.com/chuck1024/gd/net/dgrpc"
-	"github.com/chuck1024/gd/net/dhttp"
-	"github.com/chuck1024/gd/net/dogrpc"
-	"github.com/chuck1024/gd/runtime/helper"
-	"github.com/chuck1024/gd/runtime/pc"
-	"github.com/chuck1024/gd/runtime/stat"
-	"github.com/chuck1024/gd/utls"
+	"github.com/Xxianglei/gd/net/dgrpc"
+	"github.com/Xxianglei/gd/net/dhttp"
+	"github.com/Xxianglei/gd/net/dogrpc"
+	"github.com/Xxianglei/gd/runtime/helper"
+	"github.com/Xxianglei/gd/runtime/pc"
+	"github.com/Xxianglei/gd/runtime/stat"
+	"github.com/Xxianglei/gd/utls"
 	"google.golang.org/grpc"
 	"runtime"
 	"syscall"

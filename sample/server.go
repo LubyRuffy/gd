@@ -1,17 +1,17 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package main
 
 import (
 	"context"
-	"github.com/chuck1024/gd"
-	de "github.com/chuck1024/gd/derror"
-	"github.com/chuck1024/gd/net/dhttp"
-	"github.com/chuck1024/gd/net/dogrpc"
-	pb "github.com/chuck1024/gd/sample/helloworld"
+	"github.com/Xxianglei/gd"
+	de "github.com/Xxianglei/gd/derror"
+	"github.com/Xxianglei/gd/net/dhttp"
+	"github.com/Xxianglei/gd/net/dogrpc"
+	pb "github.com/Xxianglei/gd/sample/helloworld"
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
 	"net/http"

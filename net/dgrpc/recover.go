@@ -1,13 +1,13 @@
 /**
  * Copyright 2020 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dgrpc
 
 import (
 	"fmt"
-	"github.com/chuck1024/gd/dlog"
+	"github.com/Xxianglei/gd/dlog"
 	"github.com/go-errors/errors"
 	"github.com/grpc-ecosystem/go-grpc-middleware/recovery"
 	"google.golang.org/grpc/codes"

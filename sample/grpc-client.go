@@ -1,6 +1,6 @@
 /**
  * Copyright 2020 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package main
@@ -8,8 +8,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/chuck1024/gd"
-	pb "github.com/chuck1024/gd/sample/helloworld"
+	"github.com/Xxianglei/gd"
+	pb "github.com/Xxianglei/gd/sample/helloworld"
 	"google.golang.org/grpc"
 	"strconv"
 	"time"

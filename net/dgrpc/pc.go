@@ -1,6 +1,6 @@
 /**
  * Copyright 2020 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dgrpc
@@ -8,9 +8,9 @@ package dgrpc
 import (
 	"context"
 	"fmt"
-	"github.com/chuck1024/gd/runtime/gl"
-	"github.com/chuck1024/gd/runtime/pc"
-	"github.com/chuck1024/gd/utls"
+	"github.com/Xxianglei/gd/runtime/gl"
+	"github.com/Xxianglei/gd/runtime/pc"
+	"github.com/Xxianglei/gd/utls"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"time"

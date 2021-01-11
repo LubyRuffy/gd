@@ -1,6 +1,6 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package helper
@@ -8,7 +8,7 @@ package helper
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/chuck1024/gd/utls"
+	"github.com/Xxianglei/gd/utls"
 	"runtime"
 	"time"
 )

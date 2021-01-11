@@ -1,13 +1,13 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dlog
 
 import (
 	"fmt"
-	"github.com/chuck1024/gd/runtime/gl"
+	"github.com/Xxianglei/gd/runtime/gl"
 	"os"
 	"strings"
 )

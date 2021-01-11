@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dhttp
@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/chuck1024/gd/dlog"
+	"github.com/Xxianglei/gd/dlog"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"net/http"

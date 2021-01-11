@@ -1,14 +1,14 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dogrpc_test
 
 import (
-	"github.com/chuck1024/gd"
-	de "github.com/chuck1024/gd/derror"
-	"github.com/chuck1024/gd/dlog"
+	"github.com/Xxianglei/gd"
+	de "github.com/Xxianglei/gd/derror"
+	"github.com/Xxianglei/gd/dlog"
 	"testing"
 )
 

@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package helper
@@ -8,8 +8,8 @@ package helper
 import (
 	"bufio"
 	"fmt"
-	"github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/utls"
+	"github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/utls"
 	"io"
 	"net"
 	"os"

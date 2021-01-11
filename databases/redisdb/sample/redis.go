@@ -1,13 +1,13 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package main
 
 import (
-	"github.com/chuck1024/gd/databases/redisdb"
-	"github.com/chuck1024/gd/dlog"
+	"github.com/Xxianglei/gd/databases/redisdb"
+	"github.com/Xxianglei/gd/dlog"
 )
 
 func main() {

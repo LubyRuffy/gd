@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package mysqldb
@@ -9,9 +9,9 @@ import (
 	"context"
 	"database/sql"
 	"errors"
-	log "github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/runtime/gl"
-	"github.com/chuck1024/gd/runtime/pc"
+	log "github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/runtime/gl"
+	"github.com/Xxianglei/gd/runtime/pc"
 	"reflect"
 	"strings"
 	"time"

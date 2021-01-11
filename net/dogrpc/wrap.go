@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dogrpc
@@ -8,8 +8,8 @@ package dogrpc
 import (
 	"encoding/json"
 	"fmt"
-	de "github.com/chuck1024/gd/derror"
-	"github.com/chuck1024/gd/dlog"
+	de "github.com/Xxianglei/gd/derror"
+	"github.com/Xxianglei/gd/dlog"
 	"reflect"
 )
 

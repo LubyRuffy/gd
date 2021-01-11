@@ -6,7 +6,7 @@
 ## Author
 
 ```
-author: Chuck1024
+author: Xxianglei
 email : chuck.ch1024@outlook.com
 ```
 
@@ -16,7 +16,7 @@ email : chuck.ch1024@outlook.com
 Start with cloning gd:
 
 ```
-> go get github.com/chuck1024/gd
+> go get github.com/Xxianglei/gd
 ```
 
 ---
@@ -36,8 +36,8 @@ The framework contains `config module`,`databases module`,`error module`,`dlog m
 package main
 
 import (
-	"github.com/chuck1024/gd"
-	"github.com/chuck1024/gd/net/dhttp"
+	"github.com/Xxianglei/gd"
+	"github.com/Xxianglei/gd/net/dhttp"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -205,10 +205,10 @@ server:
 package main
 
 import (
-	"github.com/chuck1024/gd"
-	de "github.com/chuck1024/gd/derror"
-	"github.com/chuck1024/gd/net/dhttp"
-	"github.com/chuck1024/gd/net/dogrpc"
+	"github.com/Xxianglei/gd"
+	de "github.com/Xxianglei/gd/derror"
+	"github.com/Xxianglei/gd/net/dhttp"
+	"github.com/Xxianglei/gd/net/dogrpc"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -294,9 +294,9 @@ package main
 
 import (
     "fmt"
-    "github.com/chuck1024/gd"
-    "github.com/chuck1024/gd/dlog"
-    "github.com/chuck1024/gd/server/discovery"
+    "github.com/Xxianglei/gd"
+    "github.com/Xxianglei/gd/dlog"
+    "github.com/Xxianglei/gd/server/discovery"
     "time"
 )
 
@@ -350,7 +350,7 @@ func main() {
 package dogrpc_test
 
 import (
-	"github.com/chuck1024/gd/net/dogrpc"
+	"github.com/Xxianglei/gd/net/dogrpc"
 	"testing"
 )
 
@@ -379,8 +379,8 @@ func TestRpcServer(t *testing.T) {
 package dogrpc_test
 
 import (
-    "github.com/chuck1024/gd"
-    "github.com/chuck1024/gd/utls"
+    "github.com/Xxianglei/gd"
+    "github.com/Xxianglei/gd/utls"
     "testing"
     "time"
 )
@@ -470,7 +470,7 @@ func GetErrorType(code int) string {
 package register_test
 
 import (
-	"github.com/chuck1024/gd/server/register"
+	"github.com/Xxianglei/gd/server/register"
 	"testing"
 	"time"
 )
@@ -498,7 +498,7 @@ func TestZk(t *testing.T){
 package discovery_test
 
 import (
-    "github.com/chuck1024/gd/server/discovery"
+    "github.com/Xxianglei/gd/server/discovery"
     "testing"
     "time"
 )

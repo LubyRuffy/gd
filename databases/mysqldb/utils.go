@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package mysqldb
@@ -11,7 +11,7 @@ import (
 	"database/sql/driver"
 	"errors"
 	"fmt"
-	"github.com/chuck1024/gd/utls"
+	"github.com/Xxianglei/gd/utls"
 	"net"
 	"net/url"
 	"reflect"

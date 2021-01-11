@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dhttp
@@ -8,13 +8,13 @@ package dhttp
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/runtime/gl"
+	"github.com/Xxianglei/gd/runtime/pc"
+	"github.com/Xxianglei/gd/runtime/stat"
+	"github.com/Xxianglei/gd/utls"
+	"github.com/Xxianglei/gd/utls/network"
 	"github.com/bitly/go-simplejson"
-	"github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/runtime/gl"
-	"github.com/chuck1024/gd/runtime/pc"
-	"github.com/chuck1024/gd/runtime/stat"
-	"github.com/chuck1024/gd/utls"
-	"github.com/chuck1024/gd/utls/network"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"

@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package mysqldb
@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	log "github.com/chuck1024/gd/dlog"
+	log "github.com/Xxianglei/gd/dlog"
 
 	"time"
 

@@ -1,12 +1,12 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dogrpc_test
 
 import (
-	"github.com/chuck1024/gd/net/dogrpc"
+	"github.com/Xxianglei/gd/net/dogrpc"
 	"testing"
 )
 

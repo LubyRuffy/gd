@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package stat
@@ -8,8 +8,8 @@ package stat
 import (
 	"errors"
 	"fmt"
-	dogErr "github.com/chuck1024/gd/derror"
-	"github.com/chuck1024/gd/utls"
+	dogErr "github.com/Xxianglei/gd/derror"
+	"github.com/Xxianglei/gd/utls"
 	"log"
 	"math/rand"
 	"testing"

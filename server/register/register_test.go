@@ -1,12 +1,12 @@
 /**
  * Copyright 2018 Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package register_test
 
 import (
-	"github.com/chuck1024/gd/server/register"
+	"github.com/Xxianglei/gd/server/register"
 	"testing"
 	"time"
 )

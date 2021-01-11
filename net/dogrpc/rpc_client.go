@@ -1,14 +1,14 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dogrpc
 
 import (
-	dogError "github.com/chuck1024/gd/derror"
-	"github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/utls/network"
+	dogError "github.com/Xxianglei/gd/derror"
+	"github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/utls/network"
 	"math/rand"
 	"net"
 	"sync"

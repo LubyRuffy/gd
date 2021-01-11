@@ -1,6 +1,6 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package register
@@ -9,8 +9,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/server"
+	"github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/server"
 	"github.com/samuel/go-zookeeper/zk"
 	"strings"
 	"time"

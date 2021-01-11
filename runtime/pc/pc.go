@@ -1,6 +1,6 @@
 /**
  * Copyright 2020 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package pc
@@ -8,9 +8,9 @@ package pc
 import (
 	"bytes"
 	"fmt"
+	"github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/utls"
 	js "github.com/bitly/go-simplejson"
-	"github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/utls"
 	cMap "github.com/orcaman/concurrent-map"
 	"github.com/rcrowley/go-metrics"
 	"net/http"

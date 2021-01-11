@@ -1,11 +1,11 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package discovery
 
-import "github.com/chuck1024/gd/server"
+import "github.com/Xxianglei/gd/server"
 
 const (
 	MaxNodeNum = 128

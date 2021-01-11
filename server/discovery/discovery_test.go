@@ -1,12 +1,12 @@
 /**
  * Copyright 2018 Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package discovery_test
 
 import (
-	"github.com/chuck1024/gd/server/discovery"
+	"github.com/Xxianglei/gd/server/discovery"
 	"testing"
 	"time"
 )

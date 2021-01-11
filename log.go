@@ -1,6 +1,6 @@
 /**
  * Copyright 2020 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package gd
@@ -8,8 +8,8 @@ package gd
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/chuck1024/gd/dlog"
-	"github.com/chuck1024/gd/utls"
+	"github.com/Xxianglei/gd/dlog"
+	"github.com/Xxianglei/gd/utls"
 	"os"
 	"path/filepath"
 	"strings"

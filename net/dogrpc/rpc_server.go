@@ -1,13 +1,13 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dogrpc
 
 import (
 	"fmt"
-	"github.com/chuck1024/gd/dlog"
+	"github.com/Xxianglei/gd/dlog"
 	"strconv"
 )
 

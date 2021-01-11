@@ -1,12 +1,12 @@
 /**
  * Copyright 2020 gd Author. All rights reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package config
 
 import (
-	"github.com/chuck1024/gd/dlog"
+	"github.com/Xxianglei/gd/dlog"
 	"gopkg.in/ini.v1"
 	"sync"
 )

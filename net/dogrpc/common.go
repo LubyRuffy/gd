@@ -1,12 +1,12 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dogrpc
 
 import (
-	"github.com/chuck1024/gd/derror"
+	"github.com/Xxianglei/gd/derror"
 	"time"
 )
 

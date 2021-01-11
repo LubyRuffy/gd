@@ -1,13 +1,13 @@
 /**
  * Copyright 2018 gd Author. All Rights Reserved.
- * Author: Chuck1024
+ * Author: Xxianglei
  */
 
 package dogrpc_test
 
 import (
-	"github.com/chuck1024/gd"
-	"github.com/chuck1024/gd/utls/network"
+	"github.com/Xxianglei/gd"
+	"github.com/Xxianglei/gd/utls/network"
 	"testing"
 	"time"
 )
