@@ -22,7 +22,7 @@ import (
 )
 
 const (
-	defaultDbConf = "H:\\GoProgram\\Go\\src\\gd\\databases\\mysqldb\\sample\\conf\\conf.ini"
+	defaultDbConf = "conf/conf.ini"
 
 	PcTransactionInsertDup = "transaction_insert_dup"
 )
