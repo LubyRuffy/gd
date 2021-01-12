@@ -15,6 +15,7 @@ import (
 )
 
 const defaultCharSet = "utf8mb4"
+const defaultLoc = "Local"
 
 func (c *MysqlClient) initObjForMysqlDb(dbConfPath string) error {
 	dbConfRealPath := dbConfPath
@@ -62,6 +63,16 @@ func (c *MysqlClient) initDbs(f *ini.File, db string) error {
 		timeout += "s"
 	}
 
+	parseTime, err := m.Key("parseTime").Bool()
+	if err != nil {
+		parseTime = true
+	}
+
+	loc := m.Key("loc").String()
+	if timeout == "" {
+		timeout = defaultLoc
+	}
+
 	connTimeout := m.Key("connTimeout").String()
 	if connTimeout == "" {
 		connTimeout = "1s"
@@ -90,7 +101,7 @@ func (c *MysqlClient) initDbs(f *ini.File, db string) error {
 			continue
 		}
 
-		connMaster := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s", userWrite, passWrite, masterIp, masterPort, db, connTimeout, timeout, timeout)
+		connMaster := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s&parseTime=%t&loc=%s", userWrite, passWrite, masterIp, masterPort, db, connTimeout, timeout, timeout, parseTime, loc)
 		if enableSqlSafeUpdates {
 			connMaster = connMaster + "&sql_safe_updates=1"
 		}
@@ -104,7 +115,7 @@ func (c *MysqlClient) initDbs(f *ini.File, db string) error {
 		if slaveIpVal == "" {
 			continue
 		}
-		connSlaves = append(connSlaves, fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s", userRead, passRead, slaveIp, slavePort, db, connTimeout, timeout, timeout))
+		connSlaves = append(connSlaves, fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s&parseTime=%t&loc=%s", userRead, passRead, slaveIp, slavePort, db, connTimeout, timeout, timeout, parseTime, loc))
 	}
 
 	glSuffix := m.Key("glSuffix").String()
@@ -133,6 +144,8 @@ type DbConnectConf struct {
 	ClientFoundRows      bool   // 对于update操作,若更改的字段值跟原来值相同,当clientFoundRows为false时,sql执行结果会返回0;当clientFoundRows为true,sql执行结果返回1
 	IsProxy              bool
 	EnableSqlSafeUpdates bool // (safe update mode)，该模式不允许没有带WHERE条件的更新语句
+	ParseTime            bool
+	Loc                  string
 }
 
 func (c *MysqlClient) initDbsWithCommonConf(dbConf *CommonDbConf) error {
@@ -202,17 +215,20 @@ func (c *MysqlClient) getConnectString(conf *DbConnectConf, connTimeout, optTime
 	if conf.CharSet == "" {
 		conf.CharSet = defaultCharSet
 	}
+	if conf.Loc == "" {
+		conf.Loc = defaultLoc
+	}
 
 	conStrs := make([]string, 0, len(conf.Addrs))
 	for _, host := range conf.Addrs {
 		if host != "" {
 			var constr string
 			if conf.ClientFoundRows {
-				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%ds&readTimeout=%ds&writeTimeout=%ds&charset=%s&clientFoundRows=true",
-					conf.User, conf.Pass, host, dbname, connTimeout, optTimeout, optTimeout, conf.CharSet)
+				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%ds&readTimeout=%ds&writeTimeout=%ds&charset=%s&clientFoundRows=true&parseTime=%t&loc=%s",
+					conf.User, conf.Pass, host, dbname, connTimeout, optTimeout, optTimeout, conf.CharSet, conf.ParseTime, conf.Loc)
 			} else {
-				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%ds&readTimeout=%ds&writeTimeout=%ds&charset=%s",
-					conf.User, conf.Pass, host, dbname, connTimeout, optTimeout, optTimeout, conf.CharSet)
+				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%ds&readTimeout=%ds&writeTimeout=%ds&charset=%s&parseTime=%s&loc=%s",
+					conf.User, conf.Pass, host, dbname, connTimeout, optTimeout, optTimeout, conf.CharSet, conf.ParseTime, conf.Loc)
 			}
 
 			if conf.EnableSqlSafeUpdates {
@@ -234,16 +250,20 @@ func (c *MysqlClient) getReadWriteConnectString(conf *DbConnectConf, connTimeout
 		conf.CharSet = defaultCharSet
 	}
 
+	if conf.Loc == "" {
+		conf.Loc = defaultLoc
+	}
+
 	constrs := make([]string, 0, len(conf.Addrs))
 	for _, host := range conf.Addrs {
 		if host != "" {
 			var constr string
 			if conf.ClientFoundRows {
-				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s&charset=%s&clientFoundRows=true",
-					conf.User, conf.Pass, host, dbname, connTimeout, readTimeout, writeTimeout, conf.CharSet)
+				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s&charset=%s&clientFoundRows=true&parseTime=%t&loc=%s",
+					conf.User, conf.Pass, host, dbname, connTimeout, readTimeout, writeTimeout, conf.CharSet, conf.ParseTime, conf.Loc)
 			} else {
-				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s&charset=%s",
-					conf.User, conf.Pass, host, dbname, connTimeout, readTimeout, writeTimeout, conf.CharSet)
+				constr = fmt.Sprintf("%s:%s@tcp(%s)/%s?timeout=%s&readTimeout=%s&writeTimeout=%s&charset=%s&parseTime=%s&loc=%s",
+					conf.User, conf.Pass, host, dbname, connTimeout, readTimeout, writeTimeout, conf.CharSet, conf.ParseTime, conf.Loc)
 			}
 
 			if conf.EnableSqlSafeUpdates {

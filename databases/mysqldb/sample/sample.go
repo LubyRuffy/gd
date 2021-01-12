@@ -25,13 +25,13 @@ type TestDB struct {
 }
 
 type HoneypotSysUser struct {
-	Id            int       `orm:"column(user_id);auto" description:"用户ID" json:"id" valid:"Min(-1)"`
-	UserName      string    `orm:"column(user_name);size(64);null" description:"用户名称" json:"userName" valid:"Match(/^[a-z0-9_-]{2,50}$/)"`
-	Password      string    `orm:"column(password);size(256);null" description:"登录密码" json:"password" valid:"Match(/^[a-z0-9]{1,200}$/)"`
-	RoleId        int8      `orm:"column(role_id);null" description:"角色ID" json:"roleId" valid:"Max(999)"`
-	LastLoginTime time.Time `orm:"column(last_login_time);type(datetime);null" description:"最后一次登录时间" json:"lastLoginTime"`
-	CreateTime    time.Time `orm:"column(create_time);type(datetime);null" description:"创建时间" json:"createTime"`
-	CreateTime2   time.Time `orm:"column(create_time2);type(datetime);null" description:"创建时间" json:"createTime2"`
+	Id            int       `orm:"column(user_id);auto"  json:"id" mysqlField:"user_id"`
+	UserName      string    `orm:"column(user_name);size(64);null" json:"userName"  mysqlField:"user_name"`
+	Password      string    `orm:"column(password);size(256);null"  json:"password"   mysqlField:"password"`
+	RoleId        int8      `orm:"column(role_id);null" json:"roleId" mysqlField:"role_id"`
+	LastLoginTime time.Time `orm:"column(last_login_time);type(datetime);null" json:"lastLoginTime"  mysqlField:"last_login_time"`
+	CreateTime    time.Time `orm:"column(create_time);type(datetime);null"  json:"createTime" mysqlField:"create_time"`
+	Status        bool      `orm:"column(status);type(datetime);null" json:"status" mysqlField:"status"`
 }
 
 func main() {
@@ -50,8 +50,8 @@ func main() {
 		orm.RunSyncdb("default", false, true)
 	}
 	// Query
-	query := "select ? from test where id = ?"
-	data, err := o.Query((*TestDB)(nil), query, 2)
+	query := "select ? from honeypot_sys_user where user_id = ?"
+	data, err := o.Query((*HoneypotSysUser)(nil), query, 1)
 	if err != nil {
 		dlog.Error("err:%s", err)
 		return
