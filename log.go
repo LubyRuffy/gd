@@ -92,7 +92,7 @@ func restoreLogConfig(configFilePath string, binName string, port int, logLevel 
 	var filters []xmlFilter
 	// stdout
 	stdout := xmlFilter{
-		Enabled: "false",
+		Enabled: "true",
 		Tag:     "stdout",
 		Level:   "INFO",
 		Type:    "console",
