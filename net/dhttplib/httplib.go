@@ -1,4 +1,4 @@
-package httplib
+package dhttplib
 
 import (
 	"bytes"
